@@ -17,6 +17,9 @@ interface Workout {
   created_at: string
 }
 
+// 强制动态渲染，避免构建时预渲染
+export const dynamic = 'force-dynamic'
+
 export default function Home() {
   const router = useRouter()
   const [user, setUser] = useState<any>(null)

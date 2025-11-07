@@ -6,6 +6,9 @@ import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 
+// 强制动态渲染，避免构建时预渲染
+export const dynamic = 'force-dynamic'
+
 export default function LoginPage() {
   const router = useRouter()
   

@@ -19,6 +19,9 @@ interface WorkoutPlan {
   exercises: any // JSON格式的训练计划
 }
 
+// 强制动态渲染，避免构建时预渲染
+export const dynamic = 'force-dynamic'
+
 export default function PlansPage() {
   const router = useRouter()
   const [plans, setPlans] = useState<WorkoutPlan[]>([])

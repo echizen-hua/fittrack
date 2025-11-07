@@ -43,6 +43,9 @@ interface WorkoutData {
   weight: number
 }
 
+// 强制动态渲染，避免构建时预渲染
+export const dynamic = 'force-dynamic'
+
 export default function ChartPage() {
   const router = useRouter()
   const [exercises, setExercises] = useState<Exercise[]>([])

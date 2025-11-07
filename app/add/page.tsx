@@ -16,6 +16,9 @@ interface Exercise {
   category: string
 }
 
+// 强制动态渲染，避免构建时预渲染
+export const dynamic = 'force-dynamic'
+
 export default function AddWorkoutPage() {
   const router = useRouter()
   
